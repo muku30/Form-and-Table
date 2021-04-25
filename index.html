@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+<div class="row">
+<div class="col-sm-6" id="babu">
+  <div class="form-group"  >
+    <label for="name">Name:</label>
+    <input type="name" class="form-control" id="name" placeholder="Enter name">
+  </div>
+  <div class="form-group" >
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email"  placeholder="Enter email">
+  </div>
+  <div class="form-group" >
+    <label for="country">Country:</label>
+    <input type="country" class="form-control" id="country name" placeholder="Country name">
+  </div>
+  <div class="form-group" >
+    <label for="age">Age:</label>
+    <input type="age" class="form-control" id="age"  placeholder="Enter Age">
+  </div>
+  <button type="button" class="btn btn-primary" id="demo" onclick="myFunction()">Submit</button>
+  
+  </div>
+  
+  <div class="col-sm-6">
+
+  <h2>Data for Table </h2>
+            
+  <table class="table table-bordered" id="mytable" >
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Email</th>
+        <th>Country</th>
+		<th>Age</th>
+      </tr>
+	 
+    </thead>
+  </table>
+
+
+</div>
+
+</div>
+</div>
+<script>
+function myFunction()
+
+{
+var table= document.getElementById("mytable");
+var name = document.getElementById("name").value;
+var email = document.getElementById("email").value;
+var country = document.getElementById("country name").value;
+var age = document.getElementById("age").value;
+
+      //var row = document.createElement("tr");
+      //var cell = document.createElement("td");
+      //var newtext = document.getElementById("demo").value;
+      /*var cellText = document.createTextNode(name);
+	   var cellText = document.createTextNode(email);
+	    var cellText = document.createTextNode(country);
+		 var cellText = document.createTextNode(age);*/
+      var row = table.insertRow(1)
+	  var x = row.insertCell(0);
+	  var y = row.insertCell(1)
+	  var z = row.insertCell(2)
+	  var w = row.insertCell(3)
+      x.innerHTML = name;
+	  y.innerHTML = email;
+	  z.innerHTML = country;
+	  w.innerHTML = age;
+	  var name = document.getElementById("name").value='';
+	var email = document.getElementById("email").value ='';
+	var country = document.getElementById("country name").value='';
+	var age = document.getElementById("age").value=''
+
+		 
+	  
+      //cell.appendChild(cellText);
+      //row.appendChild(cell);
+	 
+	  
+}
+
+</script>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
